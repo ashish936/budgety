@@ -45,11 +45,41 @@ var controller = (function (budgetCtrl, UICtrl) {
  //BUDGET CONTROLLER
  var budgetController = (function () {
 
-    // write your code here
+    //best choice for the data structure is objects
+    //for a lots of objects we will use function constructors
+    function Expense(id ,description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    function Income(id ,description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    
+
+    var data = {
+        allItems : {
+            exp: [],
+            inc: []
+        },
+        totals: {
+            exp:0,
+            inc:0
+        }
+
+    }
+
+
+
+
 
  }) ();
 
- 
+
 
  //UI CONTROLLER
  var UIController = (function () {
